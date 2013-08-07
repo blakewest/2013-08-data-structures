@@ -26,14 +26,12 @@ describe("stack", function() {
     expect(function(){stack.pop()}).not.throws();
   });
 
-  it('should report its size correctly', function() {
-    var a = 'a', b = 'b', c = 'c';
+  it('should return zero for an empty stack', function() {
+    expect(stack.size()).equal(0);
+  });
 
-    stack.push(a);
-    stack.push(b);
-    stack.push(c);
-    expect(stack.size()).equal(3);
-
+/*
+  it('should reduce size by 1 after popping', function() {
     stack.pop();
     expect(stack.size()).equal(2);
 
@@ -78,4 +76,6 @@ describe("stack", function() {
       });
     }
   }
+  */
+
 });
