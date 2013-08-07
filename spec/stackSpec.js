@@ -30,8 +30,16 @@ describe("stack", function() {
     expect(stack.size()).equal(0);
   });
 
-/*
+  it('should pop the last value pushed', function() {
+    stack.push('a');
+    expect(stack.pop()).equal('a');
+  });
+
+
   it('should reduce size by 1 after popping', function() {
+    stack.push('a');
+    stack.push('b');
+    stack.push('c');
     stack.pop();
     expect(stack.size()).equal(2);
 
@@ -40,6 +48,8 @@ describe("stack", function() {
     stack.pop();
     expect(stack.size()).equal(0);
   });
+
+  /*
 
   it('should pop items in the LIFO order', function() {
     var a = 'a', b = 'b', c = 'c', d = 'd';
