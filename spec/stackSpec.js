@@ -42,14 +42,15 @@ describe("stack", function() {
     stack.push('c');
     stack.pop();
     expect(stack.size()).equal(2);
+  });
 
+  it('should not return negative size values', function() {
     stack.pop();
     stack.pop();
     stack.pop();
     expect(stack.size()).equal(0);
   });
 
-  /*
 
   it('should pop items in the LIFO order', function() {
     var a = 'a', b = 'b', c = 'c', d = 'd';
@@ -64,6 +65,7 @@ describe("stack", function() {
     expect(stack.pop()).equal(d);
     expect(stack.pop()).equal(a);
   });
+
 
   // instantiation-style-specific tests
   if (skipper.variant != 'functional'  ){
@@ -86,6 +88,5 @@ describe("stack", function() {
       });
     }
   }
-  */
 
 });
